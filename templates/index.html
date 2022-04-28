@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<link rel="stylesheet" href='/static/style.css' />
+
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+                
+        </ul>
+
+    </nav>
+
+    
+
+    <div>
+        <form action='/submit' method='post'>
+
+
+            <div class="im">
+
+                <div class="option">
+                    <label class="txt" for="option">Select one</label><br>
+                    <select name="option" class="form-select" aria-label="Default select example" required>
+                        <!-- <option selected disabled>None</option> -->
+                        <option selected disabled value="">None</option>
+                        <option id="option" value="back">Backtesting</option>
+                        <option id="option" value="alert">Alert</option>
+                        <option id="option" disabled value="trade">Auto trading</option>
+                    </select><br><br>
+                    
+
+
+                </div>
+                <input type="submit" value="Start" id="bto" >
+                
+              
+                    
+
+            </div>
+        </form>
+        
+    </div>
+
+
+</body>
+
+</html>

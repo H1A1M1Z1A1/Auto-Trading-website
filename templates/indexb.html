@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.min.js">
+    </script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css" />
+    <title>BACKTESTING</title>
+</head>
+<link rel="stylesheet" href='/static/styleb.css' />
+
+<body>
+
+    <div>
+        <br><br>
+
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <Li>INPUT</Li>
+                <li>ABOUT</li>
+
+
+            </ul>
+
+        </nav>
+    </div>
+
+
+
+    <div class="formflex">
+        <form action='/submi' method='post'>
+            <div class="flex">
+                <div class="symb">
+                    <label class="txt" for="symbol">Symbol:</label><br>
+
+                    <!-- <select name="symbol" class="form-select" multiple="multiple" id="symbol" required> -->
+                    <select name="symbol" class="form-select" aria-label="Default select example" required>
+                        <option id="symbol" selected disabled value="">None</option>
+
+
+                        <option value="BTCUSDT">BITCOIN</option>
+                        <option value="SHIBUSDT">SHIBINU</option>
+                        <option value="DOGEUSDT">DOGECOIN</option>
+                        <option value="LTCUSDT">LITECOIN</option>
+                        <option value="LUNAUSDT">LUNACOIN</option>
+                        <option value="SOLUSDT">SOLCOIN</option>
+                
+
+
+
+                </select><br><br>
+                </div>
+
+                <div class='tf'>
+                    <label class="txt" for="timeframe">Timeframe:</label><br>
+                    <select name="timeframe" class="form-select" aria-label="Default select example" required>
+                        <option id="timeframe" selected disabled value="">None</option>
+                        <option id="timeframe" value="15m">15min</option>
+                        <option id="timeframe" value="30m">30min</option>
+                        <option id="timeframe" value="1h">1hour</option>
+                        <!-- <option id="timeframe" value="1d">1day</option> -->
+                    </select><br><br>
+
+                </div>
+                <div class='bk'>
+                    <label class="txt" for="back">Back:</label><br>
+                    <select name="back" class="form-select" aria-label="Default select example" required>
+
+                        <option selected disabled value="">None</option>
+
+                        <option id="back" value="1d">1day</option>
+                        <option id="back" value="30d">30days</option>
+                        <option id="back" value="60d">60days</option>
+                </div>
+                </select><br><br>
+                <div class="str">
+                    <label class="txt" for="strategy">Strategy</label><br>
+                    <select name="strategy" class="form-select" required>
+                        <option selected disabled value="">None</option>
+
+
+
+                        <optgroup disabled label="Moving Average">
+                            <option id="strategy" value="ma">20ma cross 50ma</option>
+                        </optgroup>
+                        <optgroup label="CANDLESTICK">
+                            <option id="strategy" value="cl">Hammer or Doji </option>
+                        </optgroup>
+                        <optgroup disabled label="Others(in process)">
+                            <option id="strategy" value="sr">support and resistance</option> -->
+                            <option id="strategy" value="ai">AI trading</option>
+
+
+                    </select>
+                </div>
+            </div>
+        </div>
+
+            <div class="flexx">
+
+                <div class='tf'>
+                    <label class="txt" for="profit">profit</label><br>
+                    <select name="profit" class="form-select" aria-label="Default select example">
+                        <option selected disabled>1%</option>
+
+                    </select><br><br>
+
+                </div>
+
+
+
+                </select><br>
+
+                <div class='tf'>
+                    <label class="txt" for="loss">Stop Loss</label><br>
+                    <select name="loss" class="form-select" aria-label="Default select example">
+                        <option selected disabled>Tail of Candlestick</option>
+                    </select><br><br>
+
+                </div>
+                <div class='bk'>
+                    <label class="txt" for="">Length of Candlestick</label><br>
+                    <select name="back" class="form-select" aria-label="Default select example">
+                        <option selected disabled>3%</option>
+                </div>
+                </select><br><br>
+                <div>
+                    <input type="submit" value="Submit" id="bto">
+                </div>
+                <input type="hidden" id="option" name="option" value="back">
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

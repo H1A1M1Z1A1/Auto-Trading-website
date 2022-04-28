@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.min.js">
+  </script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css" />
+  <title>ALERT</title>
+</head>
+<link rel="stylesheet" href='/static/style2.css' />
+<style>
+
+</style>
+
+<body>
+
+  <div>
+    <br><br>
+
+    <nav>
+      <ul>
+        <li>HOME</li>
+        <Li>INPUT</Li>
+        <li>ABOUT</li>
+
+
+      </ul>
+
+    </nav>
+  </div>
+
+
+
+  <div>
+    <form action='/submi' method='post'>
+      <label class="txt" for="symbol">Symbol:</label><br>
+
+      <select name="symbol" class="form-select" multiple="multiple" id="symbol" required>
+        <option value="BTCUSDT">BITCOIN</option>
+        <option value="ETHUSDT">ETHERIUM</option>
+        <option value="DOGEUSDT">DOGECOIN</option>
+        <option value="LTCUSDT">LITECOIN</option>
+        <option value="LUNAUSDT">LUNACOIN</option>
+
+
+      </select><br><br>
+
+      <div class='tf'>
+        <label class="txt" for="timeframe">Timeframe:</label><br>
+        <select name="timeframe" class="form-select" aria-label="Default select example" required>
+          <option selected disabled value="">None</option>
+          <option id="timeframe" value="1m">1m</option>
+
+          <option id="timeframe" value="30m">30m</option>
+          <option id="timeframe" value="1h">1hours</option>
+          <option id="timeframe" value="1d">1day</option>
+        </select><br><br>
+
+      </div>
+      <div class="str">
+        <label class="txt" for="strategy">Strategy</label><br>
+        <select name="strategy" class="form-select" required>
+          <option selected disabled value="">None</option>
+
+          <optgroup label="Moving Average">
+            <option id="strategy" value="1020">10ma cross 20ma</option>
+            <option id="strategy" value="2050">20ma cross 50ma</option>
+            <option id="strategy" value="50100">50ma cross 100ma</option>
+
+
+          </optgroup>
+          <optgroup label="CANDLESTICK">
+            <option id="strategy" value="1111">Hammer or Doji </option>
+          </optgroup>
+          <optgroup disabled label="Others(in process)">
+            <option id="strategy" value="sr">support and resistance</option>
+            <option id="strategy" value="ai">AI trading</option>
+
+
+
+
+
+
+      </div>
+      </select><br><br>
+      <div>
+        <input type="submit" value="Submit">
+      </div>
+      <input type="hidden" id="option" name="option" value="alert">
+    </form>
+  </div>
+  <div class="container my-4">
+
+
+    <div class="table">
+      <p>Result:</p>
+      <p>{{d}}</p>
+
+    </div>
+  </div>
+
+  <div class="all">
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('#symbol').multiselect();
+    });
+  </script>
+
+</body>
+
+</html>

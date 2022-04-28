@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESULT</title>
+</head>
+<style>
+    .coin
+    {
+        display: flex;
+        position: relative;
+        color: #267104;
+        align-items: center;
+        flex-direction: column;
+
+    }
+</style>
+<nav>
+    {% if perc!=0 %}
+        
+    
+    <div class="coin">
+        <h1>{{symb}}</h1>
+        <h2>Loss or Profit= {{perc}}%</h2>
+    </div>
+    {% endif %}
+    
+</nav>
+<body>
+    <body>
+        <div class="coin">
+        {% if t==0: %}
+        <h1>No Trade Triggered</h1>
+    </div>
+            
+        {% endif %}
+    {% for table in tables %}
+                {{titles[loop.index]}}
+                {{ table|safe }}
+    {% endfor %}
+
+    </body>
+</body>
+</html>

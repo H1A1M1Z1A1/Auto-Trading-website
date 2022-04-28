@@ -1,0 +1,169 @@
+body {
+  background-color: rgb(255, 255, 255);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-height: 100%;
+
+
+}
+
+.form-select {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: rgb(37, 204, 21);
+  color: rgb(0, 0, 0);
+  display: inline;
+  width: 165px;
+  height: 33px;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+.txt {
+  color: rgb(0, 0, 0);
+  width: 200px;
+  position: relative;
+  top: 0;
+  left: auto;
+  font-size: 21px;
+  font-weight: initial;
+
+
+
+}
+
+
+form {
+
+  position: relative;
+  left: 46%;
+}
+
+.bk {
+  position: relative;
+  top: 120px;
+  /* display: inline; */
+  display: flow-root;
+height: 49px;
+
+}
+.str {
+  position: relative;
+  top: 115px;
+  /* display: inline; */
+
+
+}
+
+.tf {
+  position: relative;
+  top: 70px;
+  display: inline;
+
+}
+
+h2 {
+  position: relative;
+  left: 50%;
+  font-size: 150%;
+  color: rgb(0, 0, 0);
+}
+
+
+
+nav {
+  position: relative;
+  display: flex;
+
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 1.5em;
+  top: -3em;
+  left: -0.6em;
+  width: 101%;
+  border-width: 30px;
+  border: 3px solid rgb(255, 255, 255)
+}
+
+.img {
+  position: relative;
+  left: 1em;
+  top: -33em;
+  z-index: -2;
+}
+
+.cl_body {
+  position: relative;
+  left: 76em;
+  top: -54em;
+  height: 4em;
+  width: 3em;
+  background-color: #55ce29;
+}
+
+
+.strategy {
+  /* position: absolute; */
+  display: flex;
+  height: 10em;
+  width: -3em;
+  top: -23em;
+  font-size: 1em;
+  left: -26em;
+  z-index: 100;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  height: 42px;
+}
+nav ul li{
+  padding: 0 12px;
+}
+.multiselect{
+ background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: rgb(37, 204, 21);
+  color: rgb(0, 0, 0);
+  display: inline;
+  width: 239px;
+  height: 33px;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+}
+.scnd{
+  display: flow-root;
+  position: relative;
+  width: 200px;
+  top: -38em;
+  left: 27%;
+
+}
+.container {
+  background-color: rgb(255, 255, 255);
+  top: -35em;
+  left: -112rm;
+  right: 83%;
+  width: 9%;
+}
+
+.table {
+  display: flex;
+  position: absolute;
+  top: 4em;
+  font-size: 31px;
+  width: 32%;
+  max-width: 38;
+  margin-bottom: 20px;
+  left: 7em;
+}
