@@ -1,2 +1,2 @@
 #Auto trade website
-Link=http://ec2-3-110-171-209.ap-south-1.compute.amazonaws.com:8080/
+Link=http://ec2-13-127-16-42.ap-south-1.compute.amazonaws.com:8080/
